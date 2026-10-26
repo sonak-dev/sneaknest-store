@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 120" width="480" height="120">
+  <defs>
+    <linearGradient id="g" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#b91c1c"/>
+      <stop offset="1" stop-color="#ef4444"/>
+    </linearGradient>
+  </defs>
+  <!-- icon: retail price tag -->
+  <path d="M18 62 L48 26 H108 V98 H48 Z" fill="url(#g)" stroke="url(#g)" stroke-width="10" stroke-linejoin="round"/>
+  <circle cx="50" cy="62" r="9" fill="#ffffff"/>
+  <rect x="68" y="46" width="26" height="6" rx="3" fill="#ffffff"/>
+  <rect x="68" y="62" width="26" height="6" rx="3" fill="#ffffff" opacity="0.85"/>
+  <rect x="68" y="78" width="16" height="6" rx="3" fill="#ffffff" opacity="0.7"/>
+  <!-- wordmark -->
+  <text x="136" y="96" font-family="'Arial Black', Impact, 'Helvetica Neue', Arial, sans-serif" font-weight="900" font-size="64" letter-spacing="1" fill="#111111">SOLE<tspan fill="#dc2626">HUB</tspan></text>
+</svg>
