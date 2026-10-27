@@ -15,6 +15,7 @@ export const HeroSection = () => {
          <div className="
             w-full md:w-1/2
             flex flex-col
+            gap-20 md:gap-6
             text-center md:text-left
             items-center md:items-start
          ">
@@ -33,7 +34,7 @@ export const HeroSection = () => {
             <h1 className="
                text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl
                font-black text-black
-               leading-tight md:leading-none
+               leading-snug md:leading-none
                tracking-tight
                my-3 sm:my-4
             ">
@@ -107,7 +108,7 @@ export const HeroSection = () => {
             <div className="absolute w-72 h-72 sm:w-96 sm:h-96 bg-red-200/40 rounded-full blur-3xl -z-10 pointer-events-none" />
 
             <img
-               src="/images/shoe_image.png"
+               src="/images/shoes_image.png"
                alt="Nike Red Shoe"
                className="
                   w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl

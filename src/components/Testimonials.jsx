@@ -40,79 +40,129 @@ const reviews = [
 export const Testimonials = () => {
    return (
       <section className="py-12 sm:py-16 lg:py-20">
-         {/* Section Header with generous vertical spacing */}
-         <div className="text-center md:text-left mb-10 sm:mb-14">
-            <span className="inline-block bg-red-100 text-red-600 text-xs font-bold uppercase tracking-widest px-3.5 py-1 rounded-full mb-3">
-               Verified Athletic Stories
-            </span>
+         <div className="mx-auto flex max-w-7xl flex-col gap-10 px-5">
 
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-gray-900 tracking-tight my-3">
-               What Runners &amp; Athletes Say
-            </h2>
+            {/* Header */}
+            <div className="flex flex-col items-center md:items-start gap-4 text-center md:text-left">
 
-            <p className="text-gray-500 text-sm sm:text-base max-w-2xl leading-relaxed mt-2">
-               Over 14,800+ athletes put millions of kilometers into our footwear every single month. Here is their unfiltered experience.
-            </p>
-         </div>
-
-         {/* 3 Distinctive Testimonial Cards */}
-         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
-            {reviews.map((r) => (
-               <div
-                  key={r.id}
-                  className="
-                     bg-white border border-gray-200/90 rounded-3xl p-7 sm:p-8
-                     hover:shadow-2xl hover:border-red-200 hover:-translate-y-1.5
-                     transition-all duration-300
-                     flex flex-col justify-between relative overflow-hidden
-                     group
-                  "
-               >
-                  {/* Subtle quote watermark */}
-                  <span className="absolute -top-3 right-4 text-8xl text-gray-100 font-serif leading-none select-none pointer-events-none group-hover:text-red-50 transition-colors">
-                     &ldquo;
+               {/* RED BADGE */}
+               <div>
+                  <span className="inline-flex items-center rounded-full bg-red-100 px-3.5 py-1.5 text-[11px] font-bold uppercase tracking-[0.15em] text-red-600">
+                     Verified Athletic Stories
                   </span>
+               </div>
 
-                  <div className="relative z-10">
-                     {/* Shoe Model Pill & Rating Header */}
-                     <div className="flex items-center justify-between mb-4">
-                        <span className="text-[11px] font-bold bg-neutral-100 text-neutral-800 px-3 py-1 rounded-full uppercase tracking-wider">
+               {/* HEADING */}
+               <h2 className="mt-4 text-3xl font-black leading-tight tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">
+                  What Runners &amp; Athletes Say
+               </h2>
+
+               {/* DESCRIPTION */}
+               <p className="mt-3 max-w-2xl text-sm leading-6 text-gray-500 sm:text-base">
+                  Over 14,800+ athletes put millions of kilometers into our footwear every single month. Here is their unfiltered experience.
+               </p>
+
+            </div>
+
+            {/* CARDS */}
+            <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-3 lg:mt-10">
+
+               {reviews.map((r) => (
+                  <div
+                     key={r.id}
+                     className="
+                        group
+                        flex
+                        flex-col
+                        rounded-3xl
+                        border
+                        border-gray-200
+                        bg-white
+                        p-7
+                        transition-all
+                        duration-300
+                        hover:-translate-y-1
+                        hover:border-red-200
+                        hover:shadow-xl
+                     "
+                  >
+
+                     {/* TOP ROW */}
+                     <div className="flex items-center justify-between gap-4">
+
+                        {/* SHOE */}
+                        <span className="rounded-full bg-gray-100 px-3 py-1.5 text-[10px] font-bold uppercase tracking-wider text-gray-800">
                            {r.shoe}
                         </span>
-                        <div className="text-amber-500 text-sm tracking-wider font-bold">
+
+                        {/* STARS */}
+                        <div className="shrink-0 text-sm tracking-wider text-amber-500">
                            {"★".repeat(r.stars)}
                         </div>
+
                      </div>
 
-                     {/* Highlight Callout */}
-                     <p className="text-xs font-bold text-red-600 uppercase tracking-wide mb-2.5">
-                        &ldquo;{r.highlight}&rdquo;
+
+                     {/* HIGHLIGHT */}
+                     <p className="mt-5 text-xs font-bold uppercase leading-5 tracking-wide text-red-600">
+                        “{r.highlight}”
                      </p>
 
-                     {/* Main Review text with proper vertical spacing */}
-                     <p className="text-gray-600 text-xs sm:text-sm leading-relaxed mb-6 italic">
-                        &ldquo;{r.text}&rdquo;
-                     </p>
-                  </div>
 
-                  {/* Reviewer Meta Section with border separation */}
-                  <div className="flex items-center gap-3.5 border-t border-gray-100 pt-4.5 relative z-10">
-                     <div className={`w-11 h-11 rounded-full ${r.avatarBg} flex items-center justify-center font-bold text-sm shadow-xs shrink-0`}>
-                        {r.name.charAt(0)}
-                     </div>
-                     <div className="min-w-0">
-                        <div className="flex items-center gap-1.5">
-                           <p className="font-bold text-sm text-gray-900 truncate">{r.name}</p>
-                           <span className="text-[10px] text-emerald-600 font-bold bg-emerald-50 px-1.5 py-0.2 rounded-sm shrink-0">
-                              ✓
-                           </span>
+                     {/* REVIEW */}
+                     <p className="mt-3 text-sm leading-7 text-gray-600 italic">
+                        “{r.text}”
+                     </p>
+
+
+                     {/* REVIEWER */}
+                     <div className="mt-7 flex items-center gap-3 border-t border-gray-100 pt-5">
+
+                        {/* AVATAR */}
+                        <div
+                           className={`
+                              flex h-11 w-11 shrink-0 items-center justify-center
+                              rounded-full
+                              text-sm font-bold
+                              ${r.avatarBg}
+                           `}
+                        >
+                           {r.name.charAt(0)}
                         </div>
-                        <p className="text-[11px] text-gray-400 truncate">{r.role} · {r.location}</p>
-                        <p className="text-[10px] text-gray-400 mt-0.5">{r.date}</p>
+
+
+                        {/* USER INFO */}
+                        <div className="min-w-0">
+
+                           <div className="flex items-center gap-1.5">
+
+                              <p className="truncate text-sm font-bold text-gray-900">
+                                 {r.name}
+                              </p>
+
+                              <span className="flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-emerald-50 text-[9px] font-bold text-emerald-600">
+                                 ✓
+                              </span>
+
+                           </div>
+
+                           <p className="mt-1 truncate text-[11px] text-gray-400">
+                              {r.role} · {r.location}
+                           </p>
+
+                           <p className="mt-0.5 text-[10px] text-gray-400">
+                              {r.date}
+                           </p>
+
+                        </div>
+
                      </div>
+
                   </div>
-               </div>
-            ))}
+               ))}
+
+            </div>
+
          </div>
       </section>
    );

@@ -41,16 +41,16 @@ export const WhyChooseUs = () => {
    return (
       <section className="py-12 sm:py-16 lg:py-20">
          {/* Section Header with generous top & bottom spacing */}
-         <div className="text-center md:text-left mb-10 sm:mb-14">
-            <span className="inline-block bg-red-100 text-red-600 text-xs font-bold uppercase tracking-widest px-3.5 py-1 rounded-full mb-3">
+         <div className="flex flex-col items-center md:items-start gap-4 pb-10 sm:pb-8 text-center md:text-left">
+            <span className="inline-block bg-red-100 text-red-600 text-xs font-bold uppercase tracking-widest px-3.5 py-1 rounded-full">
                The Brand Advantage
             </span>
 
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-gray-900 tracking-tight my-3">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-gray-900 tracking-tight">
                Why Thousands of Athletes Choose Us
             </h2>
 
-            <p className="text-gray-500 text-sm sm:text-base max-w-2xl leading-relaxed mt-2">
+            <p className="text-gray-500 text-sm sm:text-base max-w-3xl leading-relaxed mb-5">
                We don&apos;t just sell footwear; we back every step of your journey with world-class logistics, authentic guarantees, and dedicated athlete support.
             </p>
          </div>
@@ -62,7 +62,7 @@ export const WhyChooseUs = () => {
                   key={f.title}
                   className={`
                      ${f.cardBg} ${f.borderColor}
-                     border rounded-3xl p-7 sm:p-8
+                     border rounded-2xl p-7 sm:p-8
                      hover:shadow-2xl hover:-translate-y-1.5
                      transition-all duration-300
                      flex flex-col justify-between
